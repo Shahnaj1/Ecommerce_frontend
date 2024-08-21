@@ -1,4 +1,6 @@
-const backendDomin = "http://localhost:8080"
+// const backendDomin = "http://localhost:8080"
+
+const backendDomin = "https://ecommerce-nine-rho-44.vercel.app"
 
 const SummaryApi = {
     signUP : {
