@@ -41,7 +41,7 @@ const Login = () => {
         })
 
         const dataApi = await dataResponse.json()
-
+        localStorage.setItem("token",dataApi.token);
         if(dataApi.success){
             toast.success(dataApi.message)
             navigate('/')

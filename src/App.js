@@ -18,7 +18,11 @@ function App() {
   const fetchUserDetails = async()=>{
       const dataResponse = await fetch(SummaryApi.current_user.url,{
         method : SummaryApi.current_user.method,
-        credentials : 'include'
+        credentials : 'include',
+        headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem("token")}`  // Assuming you use Bearer tokens
+      }
       })
 
       const dataApi = await dataResponse.json()
